@@ -19,7 +19,7 @@ body {
 	background: #63738a;
 	font-family: 'Roboto', sans-serif;
     height:100%;
-    background: url("https://image.freepik.com/free-photo/hands-beautiful-well-groomed-woman-with-feminine-nails-pink-background-manicure-pedicure-beauty-salon-concept-empty-space-text-logo-nails-white-gel-polish-with-abstract_137678-387.jpg");
+    background: url("https://images.unsplash.com/photo-1598104358543-2fdc2cfde345?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fG5haWxzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-repeat: no-repeat;
     background-position: center ;
     background-size:cover;
@@ -28,7 +28,7 @@ body {
 }
 .container{
     height:100%;
-    background: url("https://image.freepik.com/free-photo/hands-beautiful-well-groomed-woman-with-feminine-nails-pink-background-manicure-pedicure-beauty-salon-concept-empty-space-text-logo-nails-white-gel-polish-with-abstract_137678-387.jpg");
+    background: url("https://images.unsplash.com/photo-1598104358543-2fdc2cfde345?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fG5haWxzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
     background-repeat: no-repeat;
     background-position: center ;
     background-size: cover;
