@@ -37,7 +37,7 @@ class bookingcontroller extends Controller
                                 ->select('bookingmodels.*','registermodels.*')
                                 ->where(function($q) {
                                     $q->where('bookingmodels.status','paid')
-                                      ->orWhere('bookingmodels.checkout','No';
+                                      ->orWhere('bookingmodels.checkout','No');
                                 })
                                 ->orderBy('bookingmodels.sdate')
                                 ->get();
