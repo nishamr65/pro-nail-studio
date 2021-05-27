@@ -94,7 +94,7 @@ class nailcontroller extends Controller
                                 })
                                 ->orderBy('bookingmodels.sdate')
                                 ->get();
-               return view('adminhome',compact('data','booking'));
+               return view('adminhome',compact('booking'),$data);
     }
     public function customerHomeView()
     {

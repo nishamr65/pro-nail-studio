@@ -43,7 +43,7 @@
 						<section id="banner">
 
 							<header style="background:#000;border-radius:30px;">
-								<h2>Welcome, {{ $data->LoggedUserinfo['email'] }}</h2>
+								<h2>Welcome, {{ $LoggedUserinfo['email'] }}</h2>
 								<p style="color: lightgreen"> Pro-Nails Studio</p>
 							</header>
 						</section>
