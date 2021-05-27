@@ -44,7 +44,7 @@ class bookingcontroller extends Controller
                                 
                            
     
-        return view('bookingsview',compact ('booking'));
+        return view('adminhome',compact ('booking'));
 
     }
     
