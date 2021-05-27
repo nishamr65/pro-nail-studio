@@ -86,14 +86,15 @@ class nailcontroller extends Controller
                $registers=nailmodel::all();
                $data=['LoggedUserinfo'=>nailmodel::where('id','=',session('loggeduser'))->first()];
                $booking=DB::table('bookingmodels')
-               ->join('registermodels','bookingmodels.email','=','registermodels.email') 
-               ->select('*')
-               -> where('status', '=','paid')
-               ->where('checkout','=','No')
-               ->orderBy("sdate")
-               
-               ->get();
-               return view('adminhome',compact('booking'),$data);
+                                ->join('registermodels','bookingmodels.email','=','registermodels.email') 
+                                ->select('bookingmodels.*','registermodels.*')
+                                ->where(function($q) {
+                                    $q->where('bookingmodels.status','paid')
+                                      ->orWhere('bookingmodels.checkout','No');
+                                })
+                                ->orderBy('bookingmodels.sdate')
+                                ->get();
+               return view('adminhome',compact('data','booking'));
     }
     public function customerHomeView()
     {
