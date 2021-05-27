@@ -42,6 +42,7 @@ class bookingcontroller extends Controller
                                 ->orderBy('bookingmodels.sdate')
                                 ->get();
                                 
+                                
                            
     
         return view('adminhome',compact ('booking'));
@@ -51,10 +52,14 @@ class bookingcontroller extends Controller
     public function sea(Request $request)
     {
          $d=request('serdate');
-        $booking=bookingmodel::where('status','paid')
-                                ->orWhere('sdate',$d)
+        $booking=bookingmodel:: ->where(function($q) {
+                                    $q->where('status','paid')
+                                    ->orWhere('sdate',$d);
+                                })
                                 ->get();
         return view('perdayreport',compact ('booking'));
+
+       
     }
     /**
      * Show the form for creating a new resource.
