@@ -54,7 +54,7 @@ class bookingcontroller extends Controller
          $d=request('serdate');
         $booking=bookingmodel::where(function($q) {
                                     $q->where('status','paid')
-                                    ->orWhere('sdate',"$d");
+                                    ->orWhere('sdate','=',$d);
                                 })
                                 ->get();
         return view('perdayreport',compact ('booking'));
