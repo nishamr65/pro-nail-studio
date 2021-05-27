@@ -37,7 +37,7 @@ Route::group(['middleware'=>['LoginCheck']],function()
     Route::get('/customerhome',[nailcontroller::class,'customerHomeView']);  
     Route::get('/logout',[nailcontroller::class , 'lgout' ] ); 
 });
-    Route::post('/log',[nailcontroller::class,'check']);
+  Route::post('/log',[nailcontroller::class,'check']);
 
 Route::get('/register', [registercontroller::class,'create']);
 Route::get('/serviceadd', [servicecontroller::class,'create']);
