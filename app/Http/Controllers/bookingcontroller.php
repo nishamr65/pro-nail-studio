@@ -34,11 +34,15 @@ class bookingcontroller extends Controller
     {
         $booking=DB::table('bookingmodels')
                                 ->join('registermodels','bookingmodels.email','=','registermodels.email') 
-                                ->select('*')
-                                -> where('status', '=','paid')
-                                ->where('checkout','=','No')
-                                ->orderBy("sdate")
+                                ->select('bookingmodels.*','registermodels.*')
+                                ->where(function($q) {
+                                    $q->where('bookingmodels.status','paid')
+                                      ->orWhere('bookingmodels.checkout','No';
+                                })
+                                ->orderBy('bookingmodels.sdate')
                                 ->get();
+                                
+                           
     
         return view('bookingsview',compact ('booking'));
 

@@ -60,17 +60,20 @@
 										<h2></h2>
 									</header>
 									<ul class="dates">
-									@php
-									if($booking->isEmpty())
-										echo "<h2>*No bookings left</h2>";
-									@endphp
-									@foreach($booking as $booking)
+									
+									@if( ! empty($booking))
+									@foreach($booking as $b)
 										<li>
-											<span class="date"><a href="/booking/{{$booking->email}}/today">CheckOut</a></span>
-											<h3>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{$booking->name}}</h3>
-											<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{$booking->sname}}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{$booking->sdate}}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{$booking->mobile}}</p>
+											<span class="date"><a href="/booking/{{$b->email}}/today">CheckOut</a></span>
+											<h3>{{$b->name}}</h3>
+											<p>{{$b->sname}}</br>
+											{{$b->sdate}}</br>
+											{{$b->mobile}}</p>
 										</li>
-										@endforeach
+									@endforeach
+									@else
+										<h2>*No bookings left</h2>
+									@endif
 									</ul>
                                    </section>
 							</div>
