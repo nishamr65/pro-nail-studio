@@ -47,9 +47,8 @@ class bookingcontroller extends Controller
     public function sea(Request $request)
     {
          $d=request('serdate');
-        $booking=bookingmodel::select('*')
-                                -> where('status','paid')
-                                ->where('sdate',$d)
+        $booking=bookingmodel::where('status','paid')
+                                ->orWhere('sdate',$d)
                                 ->get();
         return view('perdayreport',compact ('booking'));
     }
