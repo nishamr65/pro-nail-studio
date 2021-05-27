@@ -24,22 +24,7 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
-								<li><a href=""> </a></li>
+								
 								
 								
 								<li><a href="/">Home</a></li>
