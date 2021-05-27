@@ -21,7 +21,7 @@
 				<section id="header">
 
 					<!-- Logo -->
-						<h1><a href="index.html">Pro-Nails</a></h1><p>Studio</p>
+						<h1><a href="/">Pro-Nails</a></h1><p>Studio</p>
 
 					<!-- Nav -->
 						<nav id="nav">

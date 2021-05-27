@@ -34,6 +34,21 @@
 					<h1><a href="/">Pro-Nails</a></h1>
 					<p>Studio</p>
                     <h1><a href="/">Sales Report</a></h1>
+                    <nav id="nav">
+							<ul>
+								<li><a href="/customerhome">Home</a></li>
+								<li><a href="#">Services</a>
+                                <ul>
+										<li><a href="/serviceadd">Add Services</a></li>
+										<li><a href="/serviceviews">View Services</a></li>
+								</ul></li>
+                                <li><a href="/readall">View bookings</a></li>
+							
+                                <li><a href="/perdayreport">Sales Report</a></li>
+								<li><a href="/logout">Log out</a></li>
+							</ul>
+						</nav>
+
 					<!-- Banner -->
 						<section id="banner">
 							<header style="background:#000;border-radius:30px;">
