@@ -89,7 +89,7 @@ class nailcontroller extends Controller
                                 ->join('registermodels','bookingmodels.email','=','registermodels.email') 
                                 ->select('bookingmodels.*','registermodels.*')
                                 ->where(function($q) {
-                                    $q->where('bookingmodels.status','paid')
+                                    $q->orWhere('bookingmodels.status','paid')
                                       ->orWhere('bookingmodels.checkout','No');
                                 })
                                 ->orderBy('bookingmodels.sdate')
