@@ -52,7 +52,7 @@ class bookingcontroller extends Controller
     public function sea(Request $request)
     {
          $d=request('serdate');
-        $booking=bookingmodel:: ->where(function($q) {
+        $booking=bookingmodel::where(function($q) {
                                     $q->where('status','paid')
                                     ->orWhere('sdate',$d);
                                 })
