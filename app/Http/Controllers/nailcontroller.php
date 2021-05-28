@@ -88,8 +88,8 @@ class nailcontroller extends Controller
                $booking=DB::table('bookingmodels')
                                 ->join('registermodels','bookingmodels.email','=','registermodels.email') 
                                 ->select('bookingmodels.*','registermodels.*')
-                                ->where('bookingmodels.status','like',"Paid")
-                                ->orWhere('bookingmodels.checkout','like',"No")
+                                ->where('bookingmodels.Status','like',"Paid")
+                                ->where('bookingmodels.Checkout','like',"No")
                                 ->orderBy('bookingmodels.sdate')
                                 ->get();
                return view('adminhome',compact('booking'),$data);

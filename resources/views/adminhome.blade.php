@@ -26,7 +26,7 @@
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
-								<li><a href="/customerhome">Home</a></li>
+								<li><a href="/adminhome">Home</a></li>
 								<li><a href="#">Services</a>
                                 <ul>
 										<li><a href="/serviceadd">Add Services</a></li>
