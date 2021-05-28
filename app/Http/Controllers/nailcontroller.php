@@ -89,7 +89,7 @@ class nailcontroller extends Controller
                                 ->join('registermodels','bookingmodels.email','=','registermodels.email') 
                                 ->select('bookingmodels.*','registermodels.*')
                                 ->where('bookingmodels.status','like',"Paid")
-                                ->orWhere('bookingmodels.checkout','like',"No");
+                                ->orWhere('bookingmodels.checkout','like',"No")
                                 ->orderBy('bookingmodels.sdate')
                                 ->get();
                return view('adminhome',compact('booking'),$data);
