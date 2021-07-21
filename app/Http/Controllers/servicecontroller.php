@@ -59,7 +59,10 @@ class servicecontroller extends Controller
         $booking->checkout=$getcheckout;
         
         $booking->save();
+        echo "<script>alert('Successfully booked')</script>";
         return redirect('/customerhome');
+        
+
     }
 
     /**

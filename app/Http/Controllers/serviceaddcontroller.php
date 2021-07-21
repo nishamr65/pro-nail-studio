@@ -31,7 +31,6 @@ class serviceaddcontroller extends Controller
         $feet=serviceaddmodel::select('*')
                                 -> where('scat', $id)
                                 ->get();
-       // return view('feetcareview');
       return view('feetcareview',compact ('feet'));
     }
     
