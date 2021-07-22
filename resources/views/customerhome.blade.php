@@ -31,6 +31,12 @@ if(!empty($res))
 								<li><a href="/logout">Log out</a></li>
 							</ul>
 						</nav>
+						@if(Session::get('msg1'))
+            <div class="alert alert-danger" style="text-align: center; color:red;">
+            {{Session::get('msg1')}}
+            </div><br>
+            @endif
+
 					<!-- Banner -->
 						<section id="banner">
 							<header style="background:#000;border-radius:30px;">
