@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\nailmodel;
-use App\Models\bookingmodels;
+use App\Models\bookingmodel;
 use Illuminate\Support\Facades\DB;
 class nailcontroller extends Controller
 {
@@ -72,7 +72,7 @@ class nailcontroller extends Controller
                     return redirect('/adminhome');
                 }     
                 else if (strcmp($cust, $userInfo->utype)==0) {
-                    if (bookingmodels::where(['email', '=',$request->lemail],['status','=','Accepted'])->exists()) {
+                    if (bookingmodel::where(['email', '=',$request->lemail],['status','=','Accepted'])->exists()) {
                         return redirect('/customerhome')->with('msg1','Congratulations, Your Booking has been ACCEPTED');
                     }
                     else {
