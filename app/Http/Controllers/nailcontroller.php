@@ -71,7 +71,12 @@ class nailcontroller extends Controller
                     return redirect('/adminhome');
                 }     
                 else if (strcmp($cust, $userInfo->utype)==0) {
-                    return redirect('/customerhome');
+                    if (bookingmodels::where(['email', '=',$request->lemail],['status','=','Accepted'])->exists()) {
+                        return redirect('/customerhome')->with('msg1','Congratulations, Your Booking has been ACCEPTED');
+                    }
+                    else {
+                        return redirect('/customerhome');
+                    }
                 }     
                   
             }
