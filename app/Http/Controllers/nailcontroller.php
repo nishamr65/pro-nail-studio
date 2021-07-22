@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\nailmodel;
+use App\Models\bookingmodels;
 use Illuminate\Support\Facades\DB;
 class nailcontroller extends Controller
 {
