@@ -239,7 +239,8 @@ body {
                 </tr>
                 <tr>
                         <td></td>
-                        <td><button class="btn-secondary">Proceed</button></td>
+                        <td><a onclick="return confirm('Are you sure you want to apply for Booking Slot? Click OK to Apply')"
+> <button class="btn-secondary">Proceed</button></a></td>
                         
                 </tr>
                 </table>
